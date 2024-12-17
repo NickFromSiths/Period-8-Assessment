@@ -255,4 +255,31 @@ const pokemons = [
 
 // 1)While chaining array methods, print the name of each pokemon with a base HP stat 75 or higher
 
+function hp75() {
+  pokemons.forEach((element) => {
+    if (element.base.HP > 75) {
+      console.log(element.name.english, element.base.HP);
+    }
+  });
+}
+hp75();
+
+console.log("");
 // 2) While Chaining Array methods print the name of each pokemon who's type includes Grass
+
+function grass() {
+  pokemons.forEach((element) => {
+    if (element.type.includes("Grass")) {
+      console.log(element.name.english, element.type);
+    }
+  });
+}
+grass();
+
+function hp(element) {
+  if (element.type["Grass"]) {
+    return true;
+  }
+}
+const filter = pokemons.filter(hp);
+console.log(filter);
