@@ -283,3 +283,14 @@ function hp(element) {
 }
 const filter = pokemons.filter(hp);
 console.log(filter);
+
+//by end of class period^
+
+//i forgot to add includes() next to element.type...
+function hp(element) {
+  if (element.type.includes("Grass")) {
+    return true;
+  }
+}
+const fiilter = pokemons.filter(hp);
+console.log(fiilter);
