@@ -11808,5 +11808,11 @@ let cards = [
 ];
 
 //1) while chaining array methods print each card that has a rarity value of "common"
+cards.forEach((card) => {
+  if (card.rarity.includes("Common")) {
+    console.log(card.name, card.rarity);
+  }
+});
 
 //2)while chainign array methods, print each card that includes "6ED" in it's printings
+console.log(cards.filter((x) => x.printings.includes("6ED")));
